@@ -1,0 +1,329 @@
+#settingsModal .modal-content {
+        border-radius: 12px;
+        height: 650px;
+        min-height: 650px;
+        overflow: hidden
+    }
+
+    #settingsModal .settings-sidebar {
+        width: 250px;
+        flex-shrink: 0;
+        background-color: var(--bs-body-bg);
+        border-right: 2px solid var(--bs-border-color);
+        padding: 30px 20px
+    }
+
+    #settingsModal .settings-main {
+        background-color: var(--bs-body-bg);
+        padding: 40px;
+        position: relative;
+        overflow-y: auto
+    }
+
+    #settingsModal .settings-nav .nav-link {
+        color: var(--bs-body-color);
+        font-weight: 800;
+        font-size: .85rem;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        padding: 12px 15px;
+        text-align: left;
+        transition: all .2s
+    }
+
+    #settingsModal .settings-nav .nav-link.active {
+        background-color: rgba(26, 24, 81, .1);
+        color: #1A1851
+    }
+
+    #settingsModal .settings-nav .nav-link:hover:not(.active) {
+        background-color: var(--bs-secondary-bg);
+        color: inherit
+    }
+
+    #settingsModal .settings-nav .nav-link i {
+        font-size: 1.1rem;
+        width: 24px;
+        display: inline-block
+    }
+
+    #settingsModal .btn-navy {
+        background-color: #1A1851 !important;
+        color: #fff !important;
+        font-weight: 800;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 24px;
+        transition: .2s
+    }
+
+    #settingsModal .btn-navy:hover {
+        background-color: #2a2775 !important;
+        color: #fff !important;
+        opacity: 1 !important
+    }
+
+    #settingsModal .form-switch.settings-switch .form-check-input {
+        width: 3em;
+        height: 1.5em;
+        cursor: pointer
+    }
+
+    #settingsModal .settings-switch .form-check-label {
+        padding-top: 4px;
+        font-weight: 700;
+        cursor: pointer
+    }
+
+    #settingsModal .theme-list-group .list-group-item {
+        cursor: pointer;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px !important;
+        margin-bottom: 5px;
+        padding: 12px 20px;
+        transition: .2s
+    }
+
+    #settingsModal .theme-list-group .list-group-item.active-theme {
+        background-color: rgba(26, 24, 81, .1);
+        color: #1A1851;
+        font-weight: 800
+    }
+
+    #settingsModal .theme-apply-container {
+        background: var(--bs-secondary-bg);
+        border: 1px solid var(--bs-border-color);
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 30px
+    }
+
+    .custom-input-modal .modal-content {
+        border-radius: 10px !important;
+        padding: 35px;
+        border: 1px solid var(--bs-border-color);
+        background-color: var(--bs-body-bg);
+        color: var(--bs-body-color)
+    }
+
+    .custom-input-modal h4 {
+        font-weight: 900;
+        margin-bottom: 25px;
+        font-size: 1.5rem
+    }
+
+    .custom-input-modal .form-label {
+        font-weight: 800;
+        font-size: .95rem;
+        color: var(--bs-body-color)
+    }
+
+    .custom-input-modal .form-control,
+    .custom-input-modal .form-select {
+        border-radius: 4px;
+        background-color: var(--bs-body-bg);
+        color: var(--bs-body-color);
+        border: 2px solid #e2e8f0;
+        padding: 12px 15px
+    }
+
+    .custom-input-modal .form-control:focus,
+    .custom-input-modal .form-select:focus {
+        border-color: #1A1851;
+        box-shadow: none
+    }
+
+    .btn-outline-navy {
+        border: 2px solid #1A1851;
+        color: #1A1851;
+        background: 0 0;
+        border-radius: 4px;
+        font-weight: 800;
+        transition: .2s
+    }
+
+    .btn-outline-navy:hover {
+        background-color: rgba(26, 24, 81, .05);
+        color: #1A1851
+    }
+
+    .custom-input-modal .btn-navy {
+        border-radius: 4px
+    }
+
+    [data-bs-theme=dark] #settingsModal .modal-content,
+    [data-bs-theme=dark] #settingsModal .settings-main,
+    [data-bs-theme=dark] #settingsModal .settings-sidebar {
+        background-color: #1e1e1e !important;
+        border-color: #333 !important;
+        color: #e0e0e0 !important
+    }
+
+    [data-bs-theme=dark] #settingsModal .settings-nav .nav-link.active {
+        background-color: rgba(130, 170, 255, .1);
+        color: #82aaff
+    }
+
+    [data-bs-theme=dark] #settingsModal .settings-nav .nav-link:hover:not(.active) {
+        color: #fff !important
+    }
+
+    [data-bs-theme=dark] #settingsModal .btn-navy {
+        background-color: #82aaff !important;
+        color: #121212 !important
+    }
+
+    [data-bs-theme=dark] #settingsModal .btn-navy:hover {
+        background-color: #a0c2ff !important;
+        color: #121212 !important;
+        opacity: 1 !important
+    }
+
+    [data-bs-theme=dark] #settingsModal .theme-list-group .list-group-item.active-theme {
+        background-color: rgba(130, 170, 255, .1);
+        color: #82aaff
+    }
+
+    [data-bs-theme=dark] .custom-input-modal .modal-content {
+        background-color: #1e1e1e !important;
+        border-color: #333 !important
+    }
+
+    [data-bs-theme=dark] .custom-input-modal .form-control,
+    [data-bs-theme=dark] .custom-input-modal .form-select {
+        background-color: #2c2c2c !important;
+        color: #fff !important;
+        border-color: #555 !important
+    }
+
+    [data-bs-theme=dark] .custom-input-modal .form-control:focus,
+    [data-bs-theme=dark] .custom-input-modal .form-select:focus {
+        border-color: #82aaff !important
+    }
+
+    [data-bs-theme=dark] .btn-outline-navy {
+        border-color: #82aaff;
+        color: #82aaff
+    }
+
+    [data-bs-theme=dark] .btn-outline-navy:hover {
+        background-color: rgba(130, 170, 255, .1);
+        color: #82aaff
+    }
+
+/* ============================================================
+   RESPONSIVE — TABLET (768px and below)
+   ============================================================ */
+@media (max-width: 768px) {
+    #settingsModal .modal-content {
+        height: auto;
+        min-height: unset;
+        max-height: 92vh;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    /* Stack sidebar above main content */
+    #settingsModal .modal-content > .d-flex {
+        flex-direction: column !important;
+    }
+
+    #settingsModal .settings-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid var(--bs-border-color);
+        padding: 16px 16px 10px;
+    }
+
+    /* Hide the big "Settings" heading — nav labels are enough */
+    #settingsModal .settings-sidebar > h4 {
+        display: none;
+    }
+
+    /* Turn vertical nav into a horizontally scrollable pill row */
+    #settingsModal .settings-nav {
+        flex-direction: row !important;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        gap: 6px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 4px;
+    }
+
+    #settingsModal .settings-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    #settingsModal .settings-nav .nav-link {
+        white-space: nowrap;
+        padding: 7px 12px;
+        font-size: 0.78rem;
+        margin-bottom: 0;
+        border-radius: 20px;
+        flex-shrink: 0;
+    }
+
+    /* Keep icon but tighten it */
+    #settingsModal .settings-nav .nav-link i {
+        width: auto;
+        font-size: 0.95rem;
+        margin-right: 4px;
+    }
+
+    #settingsModal .settings-main {
+        padding: 20px 16px;
+        overflow-y: auto;
+        max-height: 65vh;
+    }
+
+    /* Close button stays accessible */
+    #settingsModal .settings-main > .btn-close {
+        top: 12px !important;
+        right: 12px !important;
+    }
+
+    /* Tab content top spacing */
+    #settingsModal .tab-content {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — PHONE (max-width: 480px)
+   Hide icon text on very small screens to save space
+   ============================================================ */
+@media (max-width: 480px) {
+    /* Show only the icon, hide the label text */
+    #settingsModal .settings-nav .nav-link .nav-label {
+        display: none;
+    }
+
+    #settingsModal .settings-nav .nav-link i {
+        margin-right: 0;
+        font-size: 1.05rem;
+    }
+
+    #settingsModal .settings-nav .nav-link {
+        padding: 8px 10px;
+    }
+
+    #settingsModal .settings-main {
+        padding: 16px 12px;
+    }
+
+    /* Stack the row layouts in tab content */
+    #settingsModal .tab-pane .row > [class*="col-md"] {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Shrink the theme-apply-container to stack */
+    #settingsModal .theme-apply-container {
+        flex-direction: column !important;
+        gap: 12px;
+        text-align: center;
+    }
+}

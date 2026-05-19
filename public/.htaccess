@@ -1,0 +1,23 @@
+# ---------------------------------------------------------------
+# PUBLIC FOLDER .htaccess
+# Place this file at:  C:/xampp/htdocs/USTP-E-Gallery/public/.htaccess
+#
+# With the Virtual Host set up, the browser URL becomes:
+#   http://egallery.local/login
+#   http://egallery.local/admin/index
+#   http://egallery.local/user/index
+#   http://egallery.local/user/community
+# ---------------------------------------------------------------
+
+Options -Indexes
+RewriteEngine On
+
+# STEP 1 — Strip .php from any direct .php request (301 browser redirect)
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# STEP 2 — Serve .php file silently for clean URL requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)$ $1.php [L,QSA]

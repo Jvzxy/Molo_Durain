@@ -1,0 +1,163 @@
+.yearbook-card {
+        position: relative; border-radius: 15px;
+        overflow: hidden; height: 320px; background-color: #eee;
+    }
+    .yearbook-card img {
+        width: 100%; height: 100%;
+        object-fit: cover; object-position: top center; display: block;
+    }
+    .card-overlay {
+        position: absolute; bottom: 0; width: 100%;
+        background: linear-gradient(to top, rgba(26, 24, 81, 0.95) 0%, rgba(26, 24, 81, 0.7) 50%, transparent 100%);
+        color: white; padding: 20px 15px; text-align: center;
+    }
+    .card-overlay h6 { font-size: 0.9rem; font-weight: bold; margin-bottom: 5px; }
+    .card-overlay p { font-size: 0.7rem; opacity: 0.8; }
+    .quote-container {
+        background-color: #ffffff; border-radius: 15px;
+        overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .bg-light-gray { background-color: #F8F9FA; min-height: 400px; }
+    .italic { font-style: italic; color: #333; line-height: 1.6; }
+    .btn-navy-small { background: var(--navy-dark); color: white; border: none; padding: 5px 12px; border-radius: 4px; }
+    .btn-navy-small:hover, .btn-navy-small:focus, .btn-navy-small:active {
+        background-color: var(--navy-dark) !important; color: white !important;
+        transform: none !important; box-shadow: none !important; outline: none !important;
+    }
+    .dot-sm { width: 6px; height: 6px; background: #ccc; border-radius: 50%; cursor: pointer; }
+    .dot-sm.active { background: var(--navy-dark); }
+    .carousel-controls-container {
+        position: absolute; bottom: 40px; right: 50px; left: 48%; z-index: 5;
+    }
+    .carousel-item { transition: transform 0.6s ease-in-out; }
+    .carousel-indicators-custom .active { background: var(--navy-dark); }
+
+
+
+    
+    .college-carousel-wrapper {
+            position: relative;
+            padding: 0 10px; /* Slight padding to accommodate button shadows */
+        }
+        
+        .college-scroll-container {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 1.5rem; /* Matches Bootstrap g-4 spacing */
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;  /* Hides scrollbar in IE and Edge */
+            scrollbar-width: none;  /* Hides scrollbar in Firefox */
+            padding-bottom: 15px; /* Space for card shadows */
+            padding-top: 5px;
+        }
+        
+        .college-scroll-container::-webkit-scrollbar {
+            display: none; /* Hides scrollbar in Chrome, Safari, Opera */
+        }
+        
+        .college-card-item {
+            flex: 0 0 auto;
+            width: 280px; /* Fixed width so cards don't shrink */
+        }
+        
+        .carousel-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            cursor: pointer;
+            color: var(--navy-dark);
+            transition: all 0.2s ease;
+        }
+        
+        .carousel-nav-btn:hover {
+            background-color: var(--navy-dark);
+            color: white;
+        }
+        
+        .carousel-btn-left {
+            left: -20px; /* Pulls button slightly outside the container */
+        }
+        
+        .carousel-btn-right {
+            right: -20px;
+        }
+    /* --- RESPONSIVE HOME --- */
+
+    /* Tablet */
+    @media (max-width: 991.98px) {
+        .college-card-item {
+            width: 230px;
+        }
+        .carousel-btn-left { left: -10px; }
+        .carousel-btn-right { right: -10px; }
+    }
+
+    /* Mobile */
+    @media (max-width: 767.98px) {
+        /* Yearbook cards */
+        .yearbook-card {
+            height: 250px;
+        }
+
+        /* Quote carousel: un-fix the absolute controls so they sit below the text */
+        .carousel-controls-container {
+            position: static !important;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0 5px;
+        }
+
+        /* Quote text column: remove min-height, shrink padding */
+        .bg-light-gray {
+            min-height: auto !important;
+            padding: 24px !important;
+        }
+        .bg-light-gray .fs-5.italic {
+            font-size: 1rem !important;
+        }
+
+        /* College scroll: hide side arrows, let native touch scrolling work */
+        .carousel-nav-btn {
+            display: none;
+        }
+        .college-scroll-container {
+            /* keep scrolling, just no arrow buttons */
+            padding: 5px 0 15px;
+        }
+        .college-card-item {
+            width: 210px;
+        }
+
+        /* University Legacy section */
+        .row.bg-light-gray.rounded-4 .col-md-6.p-5 {
+            padding: 24px !important;
+        }
+        .row.bg-light-gray.rounded-4 img {
+            min-height: 220px !important;
+        }
+
+        /* Community CTA section */
+        .row.rounded-4.p-5 {
+            padding: 32px 20px !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .yearbook-card {
+            height: 200px;
+        }
+        .college-card-item {
+            width: 180px;
+        }
+    }
